@@ -99,7 +99,7 @@ typedef struct player_T
  */
 typedef struct points_T
 {
-    char path[257];
+    char path[256];
     int match_points;
 } Points;
 

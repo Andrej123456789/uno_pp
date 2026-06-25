@@ -377,7 +377,7 @@ int ActionInput(Runtime* runtime, Network* network, Player* players, int input_p
 
         if (players[input_player].network.ready)
         {
-            strncpy(user_input, players[input_player].network.inbuf, BUFFER_LIMIT - 1);
+            strncpy(user_input, players[input_player].network.inbuf, BUFFER_LIMIT);
             user_input[BUFFER_LIMIT] = '\0';
 
             value = atoi(user_input);
@@ -835,7 +835,7 @@ void Gameplay(Runtime* runtime, Tweaks* tweaks, Points* points, Network* network
 
                 if (players[runtime->current_player].network.ready)
                 {
-                    strncpy(user_input, players[runtime->current_player].network.inbuf, BUFFER_LIMIT - 1);
+                    strncpy(user_input, players[runtime->current_player].network.inbuf, BUFFER_LIMIT);
                     user_input[BUFFER_LIMIT] = '\0';
                 }
 
@@ -852,7 +852,7 @@ void Gameplay(Runtime* runtime, Tweaks* tweaks, Points* points, Network* network
             else
             {
                 printf((tweaks->colors == true) ? option_color : option_text);
-                scanf("%254s", user_input);
+                scanf("%255s", user_input);
             }
 
             if (strcmp(user_input, "new") == 0)

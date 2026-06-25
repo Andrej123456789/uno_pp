@@ -1,3 +1,4 @@
+.vscode/*
 **/src/executable/
 **/src/objects/
 **/src/build/

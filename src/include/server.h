@@ -15,30 +15,32 @@ struct Player;
 #define BUFFER_LIMIT 255
 
 /**
- * Starts a server
+ * Start a server
  * @param port port number
- * @param max_players maximum number of players server can receive
+ * @param number_of_players total number of players in the game
  * @return int
  */
 int net_start_server(uint16_t port, uint16_t number_of_players);
 
 /**
- * Accepts a client's connection to the server
+ * Accept a client's connection to the server
  * @param listener_fd file descriptor
- * @param g `Gameplay` struct
+ * @param players array of `Player` structs
+ * @param number_of_players total number of players in the game
  * @return void
  */
 void net_accept_clients(int listener_fd, Player* players, int number_of_players);
 
 /**
- * Polls input from clients
- * @param g `Gameplay` struct
+ * Poll input from clients
+ * @param players array of `Player` structs
+ * @param number_of_players total number of players in the game
  * @return void
  */
 void net_poll_clients(Player* players, int number_of_players);
 
 /**
- * Sends a message to one player
+ * Send a message to one player
  * @param p player
  * @param fmt message
  * @return void
@@ -46,8 +48,9 @@ void net_poll_clients(Player* players, int number_of_players);
 void send_to_player(Player* p, const char* fmt, ...);
 
 /**
- * Sends a message to all players
- * @param g `Gameplay` struct
+ * Send a message to all players
+ * @param players array of `Player` structs
+ * @param number_of_players total number of players in the game
  * @param fmt message
  * @param void
  */

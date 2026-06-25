@@ -72,7 +72,7 @@ int copy_json(Runtime* runtime, Tweaks* tweaks, Points* points, Network* network
         else if (strcmp(key, "points_path") == 0)
         {
             strncpy(points->path, json_object_get_string(val), 255);
-            points->path[256] = '\0';
+            points->path[255] = '\0';
         }
 
         else if (strcmp(key, "players") == 0)
@@ -191,11 +191,11 @@ int main(int argc, const char** argv)
         printf("%s\n", logo[i]);
     }
 
-    char settings_path[257];
+    char settings_path[256];
     if (argc == 2)
     {
         strncpy(settings_path, argv[1], 255);
-        settings_path[256] = '\0';
+        settings_path[255] = '\0';
     }
 
     else
