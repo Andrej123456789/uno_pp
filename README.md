@@ -6,6 +6,8 @@ Written using C programming language and uses around 230 kilobytes of RAM.
 
 **The name UNO is a registered trademark of its respective owner. All rights to the name, logo, and related branding are fully reserved and protected under applicable trademark laws.**
 
+[Latest release - v4.0.0](https://github.com/Andrej123456789/uno_pp/releases/tag/v4.0.0)
+
 ## Rules
 
 [Uno rules](<https://en.wikipedia.org/wiki/Uno_(card_game)>)
