@@ -43,6 +43,9 @@ static int set_nonblocking(SOCKET s)
     return ioctlsocket(s, FIONBIO, &mode);
 }
 
+/**
+ * Entry point for the client
+ */
 int main(int argc, char *argv[])
 {
     for (int i = 0; i < 11; i++)

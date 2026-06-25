@@ -34,7 +34,7 @@ char logo[11][106] =
 };
 
 /**
- * Enable non-blocking mode on a file descriptor.
+ * Enable non-blocking mode on a file descriptor
  * @param fd File descriptor to set.
  * @return int
  */
@@ -44,6 +44,9 @@ static int set_nonblocking(int fd)
     return (fl < 0) ? -1 : fcntl(fd, F_SETFL, fl | O_NONBLOCK);
 }
 
+/**
+ * Entry point for the client
+ */
 int main(int argc, char *argv[])
 {
     for (int i = 0; i < 11; i++)

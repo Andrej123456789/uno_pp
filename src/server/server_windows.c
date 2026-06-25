@@ -20,7 +20,7 @@
 #pragma comment(lib, "ws2_32.lib")
 
 /**
- * Enable non-blocking mode on a socket.
+ * Enable non-blocking mode on a socket
  * @param s SOCKET
  */
 static int set_nonblocking(SOCKET s)
